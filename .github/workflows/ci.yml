@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Cache Bazel
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cache/bazel
+        key: ${{ runner.os }}-bazel-${{ hashFiles('.bazelversion', '.bazelrc', 'WORKSPACE', 'WORKSPACE.bazel', 'MODULE', 'MODULE.bazel') }}
+        restore-keys: |
+          ${{ runner.os }}-bazel-
+
+    - name: Build and Test
+      run: |
+        bazel build //...
+        bazel test --test_output=all //...
