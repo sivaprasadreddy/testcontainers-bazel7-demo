@@ -2,13 +2,3 @@ load("@gazelle//:def.bzl", "gazelle")
 
 # gazelle:prefix github.com/sivaprasadreddy/testcontainers-bazel7-demo/products
 gazelle(name = "gazelle")
-
-gazelle(
-    name = "gazelle-update-repos",
-    args = [
-        "-from_file=go.work",
-        "-to_macro=deps.bzl%go_dependencies",
-        "-prune",
-    ],
-    command = "update-repos",
-)
