@@ -21,23 +21,3 @@ go_test(
         "@com_github_testcontainers_testcontainers_go_modules_postgres//:go_default_library",
     ],
 )
-
-go_library(
-    name = "products",
-    srcs = ["repo.go"],
-    importpath = "github.com/sivaprasadreddy/testcontainers-bazel7-demo/products/products",
-    visibility = ["//visibility:public"],
-    deps = ["@com_github_jackc_pgx_v5//:go_default_library"],
-)
-
-go_test(
-    name = "products_test",
-    srcs = ["repo_test.go"],
-    embed = [":products"],
-    deps = [
-        "@com_github_stretchr_testify//assert",
-        "@com_github_testcontainers_testcontainers_go//:go_default_library",
-        "@com_github_testcontainers_testcontainers_go//wait:go_default_library",
-        "@com_github_testcontainers_testcontainers_go_modules_postgres//:go_default_library",
-    ],
-)

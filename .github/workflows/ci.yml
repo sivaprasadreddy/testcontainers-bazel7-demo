@@ -11,6 +11,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Print Java and Go versions
+      run: |
+        java -version
+        go version
+
     - name: Cache Bazel
       uses: actions/cache@v3
       with:
