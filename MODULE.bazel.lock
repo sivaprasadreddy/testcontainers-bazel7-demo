@@ -1,6 +1,6 @@
 {
   "lockFileVersion": 3,
-  "moduleFileHash": "b0bcbd0d3fda6f0c1f2cb0d735a4134d9458a3545aa61d1dd97cf31f04e019cf",
+  "moduleFileHash": "f14940257038290eefae1838a8dadf6ee2a4dac2f2b266f39d338ff375dd4ca5",
   "flags": {
     "cmdRegistries": [
       "https://bcr.bazel.build/"
@@ -46,6 +46,7 @@
                 "artifacts": [
                   "org.postgresql:postgresql:42.6.0",
                   "ch.qos.logback:logback-classic:1.4.6",
+                  "org.testcontainers:testcontainers:1.19.3",
                   "org.testcontainers:postgresql:1.19.3",
                   "org.junit.platform:junit-platform-launcher:1.10.1",
                   "org.junit.platform:junit-platform-reporting:1.10.1",
@@ -72,7 +73,7 @@
           "usingModule": "<root>",
           "location": {
             "file": "@@//:MODULE.bazel",
-            "line": 36,
+            "line": 37,
             "column": 23
           },
           "imports": {},
@@ -86,7 +87,7 @@
               "devDependency": false,
               "location": {
                 "file": "@@//:MODULE.bazel",
-                "line": 39,
+                "line": 40,
                 "column": 16
               }
             }
@@ -100,7 +101,7 @@
           "usingModule": "<root>",
           "location": {
             "file": "@@//:MODULE.bazel",
-            "line": 41,
+            "line": 42,
             "column": 24
           },
           "imports": {
@@ -119,7 +120,7 @@
               "devDependency": false,
               "location": {
                 "file": "@@//:MODULE.bazel",
-                "line": 42,
+                "line": 43,
                 "column": 18
               }
             }
@@ -1897,6 +1898,27 @@
             "ruleClassName": "sh_config",
             "attributes": {
               "name": "bazel_tools~sh_configure_extension~local_config_sh"
+            }
+          }
+        }
+      }
+    },
+    "@@contrib_rules_jvm~0.21.4//java/private:non-module-deps.bzl%non_module_deps": {
+      "general": {
+        "bzlTransitiveDigest": "Vjo8bjbQiCmbTCZkdQl7cEduY3i87cPoBbFV0P4dxMU=",
+        "accumulatedFileDigests": {},
+        "envVariables": {},
+        "generatedRepoSpecs": {
+          "io_grpc_grpc_java": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_archive",
+            "attributes": {
+              "name": "contrib_rules_jvm~0.21.4~non_module_deps~io_grpc_grpc_java",
+              "sha256": "17dd91014032a147c978ae99582fddd950f5444388eae700cf51eda0326ad2f9",
+              "strip_prefix": "grpc-java-1.56.1",
+              "urls": [
+                "https://github.com/grpc/grpc-java/archive/v1.56.1.tar.gz"
+              ]
             }
           }
         }
@@ -3999,7 +4021,7 @@
       "general": {
         "bzlTransitiveDigest": "9VQBVBpk1BYX8MlZX/v6yoWpeoWbbeIDc8bZ2kiueLI=",
         "accumulatedFileDigests": {
-          "@@//:maven_install.json": "d1cdeb0aaa490557cfc4695fc615e3620387096337896220a7299342ec960929",
+          "@@//:maven_install.json": "36ef55af5a422d2d5109be55a67ab205fcfefe4c3f4a4b93b83c208aa4ab2bfc",
           "@@rules_jvm_external~5.3//:rules_jvm_external_deps_install.json": "741ab2ef3843a43eaacb45d1448835c9deb99c95162279f513096eface8acd44"
         },
         "envVariables": {},
@@ -4327,6 +4349,7 @@
               "artifacts": [
                 "{ \"group\": \"org.postgresql\", \"artifact\": \"postgresql\", \"version\": \"42.6.0\" }",
                 "{ \"group\": \"ch.qos.logback\", \"artifact\": \"logback-classic\", \"version\": \"1.4.6\" }",
+                "{ \"group\": \"org.testcontainers\", \"artifact\": \"testcontainers\", \"version\": \"1.19.3\" }",
                 "{ \"group\": \"org.testcontainers\", \"artifact\": \"postgresql\", \"version\": \"1.19.3\" }",
                 "{ \"group\": \"org.junit.platform\", \"artifact\": \"junit-platform-launcher\", \"version\": \"1.10.1\" }",
                 "{ \"group\": \"org.junit.platform\", \"artifact\": \"junit-platform-reporting\", \"version\": \"1.10.1\" }",
@@ -6584,6 +6607,7 @@
               "artifacts": [
                 "{ \"group\": \"org.postgresql\", \"artifact\": \"postgresql\", \"version\": \"42.6.0\" }",
                 "{ \"group\": \"ch.qos.logback\", \"artifact\": \"logback-classic\", \"version\": \"1.4.6\" }",
+                "{ \"group\": \"org.testcontainers\", \"artifact\": \"testcontainers\", \"version\": \"1.19.3\" }",
                 "{ \"group\": \"org.testcontainers\", \"artifact\": \"postgresql\", \"version\": \"1.19.3\" }",
                 "{ \"group\": \"org.junit.platform\", \"artifact\": \"junit-platform-launcher\", \"version\": \"1.10.1\" }",
                 "{ \"group\": \"org.junit.platform\", \"artifact\": \"junit-platform-reporting\", \"version\": \"1.10.1\" }",
